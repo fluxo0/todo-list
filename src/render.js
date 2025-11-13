@@ -1,4 +1,5 @@
 import { TodoItem, Project, ProjectList } from "./todo";
+import { todoRender } from "./todoRender";
 
 export function render(projectList) {
     const projectContainers = document.querySelectorAll(".project-container");
@@ -31,23 +32,62 @@ export function render(projectList) {
 
         deleteBtnAttribs(deleteProjectBtn, i, projectList);
         projectContainer.appendChild(deleteProjectBtn);
-
+        
         const todoItems = projectList.arr[i].todoItems;
         for (let j = 0; j < todoItems.length; j++) {
+            const todoItem = todoItems[j];
+
             const todoContainer = document.createElement("div");
             todoContainer.setAttribute("class", "todo-container");
             projectContainer.appendChild(todoContainer);
+
+            const todoCheck = document.createElement("input");
+            todoCheck.setAttribute("type", "checkbox");
+
+            if (todoItem.checkList === true) {
+                todoCheck.setAttribute("checked", "");
+            }
+
+            todoCheck.addEventListener("click", () => {
+                todoItem.checkList = !todoItem.checkList;
+            });
+
+            todoContainer.appendChild(todoCheck);
 
             const todo = document.createElement("input");
             todo.setAttribute("class", "todo-input");
             inputAttribs(todo);
             todoInputAttribs(todo, j, projectList, i);
+
             todoContainer.appendChild(todo);
+
+            const todoDate = document.createElement("p");
+            todoDate.textContent = todoItem.dueDate;
+            todoDate.setAttribute("class", "todo-date");
+
+            todoContainer.appendChild(todoDate);
+            
+            const todoMore = document.createElement("button");
+            todoMore.setAttribute("class", "todo-more-btn")
+            todoMore.textContent = "more";
+
+            todoMore.addEventListener("click", () => {
+                const containers = document.querySelectorAll(".project-container");
+                deleteContainers(containers);
+                todoRender(i, j, projectList);
+            });
+
+            todoContainer.appendChild(todoMore);
+
+            const description = document.createElement("p");
+            description.textContent = todoItem.description;
+
+            todoContainer.appendChild(description);
         }
     }
 }
 
-function deleteContainers(containers) {
+export function deleteContainers(containers) {
     containers.forEach(container => {
         container.remove();
     });

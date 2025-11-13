@@ -1,6 +1,7 @@
 import "./styles.css"
 import { TodoItem, Project, ProjectList } from "./todo";
 import { render } from "./render";
+import { todoRender } from "./todoRender";
 
 const newProjectBtn = document.querySelector("#new-project-btn");
 const projectList = new ProjectList;

@@ -3,7 +3,7 @@ export class TodoItem {
         this.title = title;
         this.description = "";
         this.dueDate = "";
-        this.priority = "";
+        this.priority = "low";
         this.notes = "";
         this.checkList = false;
     }

@@ -8,6 +8,10 @@ body {
     background-color: gray;
 }
 
+.hidden {
+    display: none !important;
+}
+
 #main-container {
     display: flex;
     flex-direction: column;
@@ -31,3 +35,4 @@ body {
 .todo-container {
     grid-column: 1 / 4;
 }
+
