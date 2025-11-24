@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next SmBd';
+    src: url('AtkinsonHyperlegibleNext-SemiBoldItalic.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next SmBd';
+    src: url('AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-Regular.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next ExLight';
+    src: url('AtkinsonHyperlegibleNext-ExtraLightItalic.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-LightItalic.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-Light.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-MediumItalic.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-Medium.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next ExBd';
+    src: url('AtkinsonHyperlegibleNext-ExtraBoldItalic.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next ExLight';
+    src: url('AtkinsonHyperlegibleNext-ExtraLight.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next ExBd';
+    src: url('AtkinsonHyperlegibleNext-ExtraBold.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('AtkinsonHyperlegibleNext-Bold.woff2') format('woff2'),
+        url('AtkinsonHyperlegibleNext-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

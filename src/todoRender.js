@@ -32,7 +32,7 @@ export function todoRender(projectId, todoId, projectList) {
 
     const description = document.createElement("input");
     description.setAttribute("placeholder", "Description...");
-    description.setAttribute("class", "description");
+    description.setAttribute("class", "more-description");
     description.value = todoItem.description;
 
     description.addEventListener("keyup", () => {
@@ -49,6 +49,7 @@ export function todoRender(projectId, todoId, projectList) {
     const label = document.createElement("label");
     label.textContent = "due date:";
     label.setAttribute("for", "dueDate");
+    label.setAttribute("class", "due-date");
     todoPage.appendChild(label);
 
     const date = document.createElement("input");
@@ -63,6 +64,7 @@ export function todoRender(projectId, todoId, projectList) {
 
     const notesLabel = document.createElement("label");
     notesLabel.setAttribute("for", "notes");
+    notesLabel.setAttribute("class", "notes");
     notesLabel.textContent = "Notes";
 
     todoPage.appendChild(notesLabel);
@@ -163,7 +165,6 @@ function formatDate(cDate) {
     const cDateArr = cDate.split("-");
     const result = 
         format(new Date(cDateArr[0], (cDateArr[1] - 1), cDateArr[2]), 'MM/dd/yyyy');
-    
     return result;
 }
 

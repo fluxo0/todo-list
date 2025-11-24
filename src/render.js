@@ -59,6 +59,8 @@ export function render(projectList) {
             inputAttribs(todo);
             todoInputAttribs(todo, j, projectList, i);
 
+            borderRight(todo, todoItem.priority);
+
             todoContainer.appendChild(todo);
 
             const todoDate = document.createElement("p");
@@ -80,6 +82,7 @@ export function render(projectList) {
             todoContainer.appendChild(todoMore);
 
             const description = document.createElement("p");
+            description.setAttribute("class", "description");
             description.textContent = todoItem.description;
 
             todoContainer.appendChild(description);
@@ -93,11 +96,10 @@ export function deleteContainers(containers) {
     });
 }
 
-function inputAttribs(input) {
+function inputAttribs(input) { 
     input.setAttribute("type", "text");
     input.setAttribute("minlength", "1");
     input.setAttribute("maxlength", "75");
-    // input.setAttribute("data-id", `${id}`);
 }
 
 function projectInputAttribs(input, id, projectList) {
@@ -140,5 +142,20 @@ function deleteBtnAttribs(deleteBtn, id, projectList) {
         projectList.remove(id);
         render(projectList);
     });
+}
+
+function borderRight(todo, priority) {
+    console.log(todo);
+    switch (priority) {
+        case "low":
+            todo.setAttribute("id", "low");
+            break;
+        case "middle":
+            todo.setAttribute("id", "middle");
+            break;
+        case "high":
+            todo.setAttribute("id", "high");
+            break;
+    }
 }
 

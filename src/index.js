@@ -1,4 +1,6 @@
-import "./styles.css"
+import "./fonts/stylesheet.css";
+import "./styles.css";
+import "./todo-page.css"
 import { TodoItem, Project, ProjectList } from "./todo";
 import { render } from "./render";
 import { todoRender } from "./todoRender";
