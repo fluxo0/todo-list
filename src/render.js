@@ -1,11 +1,11 @@
-import { TodoItem, Project, ProjectList } from "./todo";
+import { TodoItem, Project } from "./todo";
 import { todoRender } from "./todoRender";
 
 export function render(projectList) {
     const projectContainers = document.querySelectorAll(".project-container");
-    // const todoContainers = document.querySelectorAll(".todo-container");
 
     const content = document.querySelector("#content");
+    populateStorage(projectList.arr);
 
     deleteContainers(projectContainers);
 
@@ -50,6 +50,7 @@ export function render(projectList) {
 
             todoCheck.addEventListener("click", () => {
                 todoItem.checkList = !todoItem.checkList;
+                populateStorage(projectList.arr);
             });
 
             todoContainer.appendChild(todoCheck);
@@ -87,7 +88,7 @@ export function render(projectList) {
 
             todoContainer.appendChild(description);
         }
-    }
+    } 
 }
 
 export function deleteContainers(containers) {
@@ -110,6 +111,7 @@ function projectInputAttribs(input, id, projectList) {
 
     input.addEventListener("keyup", () => {
         project.title = input.value;
+        populateStorage(projectList.arr);
     });
 }
 
@@ -129,9 +131,14 @@ function todoBtnAttribs(todoBtn, id, projectList) {
     todoBtn.textContent = "+";
     todoBtn.addEventListener("click", () => {
         const todo = new TodoItem("");
-        const project = projectList.arr[id];
-        
+        const project = new Project;
+
+        const copyP = projectList.arr[id];
+        project.update(copyP.title, copyP.todoItems);
         project.add(todo);
+        projectList.arr[id] = project;
+        console.log(projectList.arr[id]);
+        
         render(projectList);
     });
 }
@@ -145,7 +152,6 @@ function deleteBtnAttribs(deleteBtn, id, projectList) {
 }
 
 function borderRight(todo, priority) {
-    console.log(todo);
     switch (priority) {
         case "low":
             todo.setAttribute("id", "low");
@@ -158,4 +164,9 @@ function borderRight(todo, priority) {
             break;
     }
 }
+
+function populateStorage(arr) {
+    const listStr = JSON.stringify(arr);
+    localStorage.setItem('listarr', listStr);
+} 
 

@@ -18,6 +18,11 @@ export class Project {
     add(todoItem) {
         this.todoItems.unshift(todoItem);
     }
+
+    update(title, items) {
+        this.title = title;
+        this.todoItems = items;
+    }
 }
 
 export class ProjectList {
@@ -35,5 +40,9 @@ export class ProjectList {
 
     get length() {
         return this.arr.length;
+    }
+
+    update(list) {
+        this.arr = list;
     }
 }
